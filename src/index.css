@@ -1,13 +1,150 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+header {
+  width: 100%;
+  padding: 0 0.25em;
+  background-color: lightblue;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ol {
+  padding: 2em;
+}
+
+li {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.recipe-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-button {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.recipe {
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  margin: 0.25rem 0;
+  background-color: lightblue;
+}
+
+.recipe-content {
+  display: flex;
+}
+
+.recipe svg {
+  width: 48px;
+  min-width: 48px;
+  height: 20px;
+  font-size: 1rem;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.recipe svg:focus,
+.recipe svg:hover {
+  color: red;
+  outline: none;
+}
+
+.addForm {
+  background-color: #eee;
+  margin: 20px 5px 0px 30px;
+  width: 500px;
+  padding-top: 5px;
+}
+
+.addForm div {
+  padding: 8px;
+}
+
+.addForm input {
+  margin-right: 20px;
+  padding: 4px;
+  border: 2px solid;
+  border-radius: 2px;
+  border-color: lightgray;
+  width: 250px;
+}
+
+.addForm textarea {
+  margin-right: 20px;
+  padding: 4px;
+  border: 2px solid;
+  border-radius: 2px;
+  border-color: lightgray;
+  width: 250px;
+}
+
+.addForm button {
+  background-color: aliceblue;
+  border: 1px solid;
+  padding: 4px;
+  display: flex;
+}
+
+.addForm select {
+  margin-left: 12px;
+  background-color: aliceblue;
+  border: 1px solid;
+  padding: 4px;
+}
+
+.Nav {
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.Nav ul {
+  color: #fff;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.Nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.Nav li:hover,
+.Nav li:focus,
+.Nav li:hover a,
+.Nav li:focus a {
+  background-color: #eee;
+  color: #333;
+}
+
+.Nav li:hover a,
+.Nav li:focus a {
+  cursor: pointer;
+}
+
+.addForm h3 {
+  margin-left: 8px;
 }
