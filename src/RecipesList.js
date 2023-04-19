@@ -1,19 +1,20 @@
-import LineRecipe from "./LineRecipe"
+import LineRecipe from "./LineRecipe";
 import { useContext } from "react";
 import DataContext from "./context/DataContext";
+import SortBar from "./SortBar";
 
 const RecipesList = () => {
-  
-  const {recipes} = useContext(DataContext)
-  
+  const { recipes } = useContext(DataContext);
+
   return (
-    <ol>
-      {recipes.map((recipe) => (
-        <LineRecipe 
-        key={recipe.id}
-        recipe={recipe}/>
-      ))}
-    </ol>
+    <>
+      <SortBar />
+      <ol>
+        {recipes.map((recipe) => (
+          <LineRecipe key={recipe.id} recipe={recipe} />
+        ))}
+      </ol>
+    </>
   );
 };
 

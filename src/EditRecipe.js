@@ -43,7 +43,6 @@ const EditRecipe = () => {
   const { id } = useParams();
 
   const recipe = recipes.find((recipe) => recipe.id.toString() === id);
-  console.log(recipe)
 
   useEffect(() => {
     if (recipe) {

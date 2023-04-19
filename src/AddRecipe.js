@@ -9,7 +9,7 @@ const AddRecipe = () => {
   
   const [recipeName, setRecipeName] = useState("");
   const [recipeBody, setRecipeBody] = useState("");
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -22,7 +22,7 @@ const AddRecipe = () => {
       const newRecipeId = await api.post("/recipes", newRecipe);
       const postedRecipe = await api.get(`/recipes/${newRecipeId.data}`);
       const allRecipes = [...recipes, postedRecipe.data];
-
+      
       setRecipes(allRecipes);
       setRecipeName("");
       setRecipeBody("");

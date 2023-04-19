@@ -5,8 +5,6 @@
   font-family: sans-serif;
 }
 
-
-
 header {
   width: 100%;
   padding: 0 0.25em;
@@ -15,10 +13,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: 520px;
 }
 
 ol {
-  padding: 2em;
+  padding: 0 10px 0 10px;
+  min-width: 500px;
 }
 
 li {
@@ -70,13 +70,18 @@ li {
 
 .addForm {
   background-color: #eee;
-  margin: 20px 5px 0px 30px;
-  width: 500px;
+  margin: 18px 8px;
+  width: 35%;
   padding-top: 5px;
+  min-width: 480px;
 }
 
 .addForm div {
   padding: 8px;
+}
+
+.Nav input:focus{
+  outline: none;
 }
 
 .addForm input {
@@ -97,11 +102,21 @@ li {
   width: 250px;
 }
 
-.addForm button {
+.submitButton {
   background-color: aliceblue;
   border: 1px solid;
   padding: 4px;
   display: flex;
+}
+
+.searchButton {
+  background-color: rgb(91, 91, 241);
+  border: 0 solid;
+  padding: 4px 15px;
+  border-radius: 8px;
+  color: aliceblue;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .addForm select {
@@ -116,20 +131,80 @@ li {
   background-color: #333;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  min-width: 520px;
 }
 
 .Nav ul {
   color: #fff;
   list-style-type: none;
   display: flex;
-  align-items: center;
+  flex-flow: row;
+  height: 100%;
+  margin-right: 15px;
+}
+
+.Nav li {
+  width: 60px;
 }
 
 .Nav li a {
   color: #fff;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2px;
+}
+
+.searchForm {
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  flex-wrap: nowrap;
+  width: 320px;
+}
+
+.Nav form {
+  min-width: 300;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.searchForm input {
+  margin: 0 2px;
+  padding: 4px 6px;
+  border-radius: 8px;
+  border-color: lightgray;
+  border: 2px;
+  position: relative;
+}
+
+.resetButton {
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  color: #eee;
+  border: none;
+  margin: 0 2px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.resetButton:hover {
+  background-color: #eee;
+  color: #333;
+  outline: none;
+
 }
 
 .Nav li:hover,

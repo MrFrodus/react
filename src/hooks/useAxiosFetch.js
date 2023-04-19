@@ -15,7 +15,7 @@ const useAxiosFetch = (dataUrl) => {
       } catch (error) {
         setFetchError(error.message);
       } finally {
-        setTimeout(() => setIsLoading(false), 2000);
+        setIsLoading(false);
       }
     };
 
